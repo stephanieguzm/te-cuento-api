@@ -10,7 +10,7 @@ exports.up = function(knex) {
       table.string('name')
       table.string('img')
       table.string('origin')
-      table.string('description')
+      table.text('description')
       table.string('brew_time')
       table.integer('temperature')
       table.integer('infusions')

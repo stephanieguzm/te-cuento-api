@@ -3,8 +3,8 @@
  * @returns { Promise<void> } 
  */
 exports.seed = async function(knex) {
-  await knex('table_name').del()
-  await knex('table_name').insert([ 
+  await knex('comments').del()
+  await knex('comments').insert([ 
     {
       id: 1,
       tea_id: 1,
