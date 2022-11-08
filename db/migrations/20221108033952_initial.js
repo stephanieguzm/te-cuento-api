@@ -23,8 +23,8 @@ exports.up = function(knex) {
       table.increments('id').primary()
       table.integer('tea_id').unsigned()
       table.foreign('tea_id').references('teas.id')
-      table.string('user_name')
-      table.string('user_message')
+      table.string('user_name').notNullable()
+      table.text('user_message').notNullable()
   })
 }
 
