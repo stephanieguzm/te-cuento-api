@@ -41,9 +41,9 @@ app.get('/api/v1/comments', async (request, response) => {
 /* ------------ GET SINGLE TEA ------------ */
 app.get('/api/v1/teas/:id', async (request, response) => {
   try {
-    const tea = await database('teas').where('id', request.params.id).select()
+    const teas = await database('teas').where('id', request.params.id).select()
     if (teas.length) {
-      response.status(200).json(tea)
+      response.status(200).json(teas)
     } else {
       response.status(404).json({
         error: `Could not find tea with id ${request.params.id}`

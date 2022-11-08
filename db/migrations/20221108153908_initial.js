@@ -17,7 +17,6 @@ exports.up = function(knex) {
       table.text('caffeine_level')
       table.text('farmer')
       table.text('farmer_img')
-
   })
     .createTable('comments', function(table) {
       table.increments('id').primary()
