@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
   return knex.schema
-    .createTable('teas', table => {
+    .createTable('teas', function(table) {
       table.increments('id').primary()
       table.text('type')
       table.text('name')
@@ -19,7 +19,7 @@ exports.up = function(knex) {
       table.text('farmer_img')
 
   })
-    .createTable('comments', table => {
+    .createTable('comments', function(table) {
       table.increments('id').primary()
       table.integer('tea_id').unsigned()
       table.foreign('tea_id').references('teas.id')
@@ -34,6 +34,6 @@ exports.up = function(knex) {
  */
 exports.down = function(knex) {
   return knex.schema
-    .dropTableIfExists('teas')
-    .dropTableIfExists('comments')
+    .dropTable('comments')
+    .dropTable('teas')
 }
