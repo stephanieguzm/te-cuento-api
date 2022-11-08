@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "description": "API for Te Cuento Showcase Project",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewPress/stretch-tech-api.git"
+  },
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "knex": "knex"
   },
   "author": "Stephanie Guzman",
   "license": "ISC",
