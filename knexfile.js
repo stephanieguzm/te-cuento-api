@@ -1,5 +1,4 @@
-// Update with your config settings.
-
+const DATABASE_URL = process.env.DATABASE_URL
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
