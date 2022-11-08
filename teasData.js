@@ -1,12 +1,4 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
- */
-exports.seed = async function(knex) {
-  await knex('comments').del()
-  await knex('teas').del()
-  
-  await knex('teas').insert([
+let teasData = [ 
     {
       id: 1,
       type: "green",
@@ -133,5 +125,6 @@ exports.seed = async function(knex) {
       farmer: "Zhang Xiao Han",
       farmer_img: "../../../uploads/09_white_farmer.jpeg",
     },
-  ]);
-};
+  ]
+
+  module.exports = teasData
