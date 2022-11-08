@@ -52,7 +52,7 @@ app.get('/api/v1/teas/:id', async (request, response) => {
 })
 
 /* ------------ POST SINGLE COMMENT ------------ */
-app.post('/api/v1/advice', async(request, response) => {
+app.post('/api/v1/comments', async(request, response) => {
   const comment = request.body
 
   for (let requiredParameter of ['id', 'tea_id', 'user_name', 'user_message']) {
@@ -63,7 +63,7 @@ app.post('/api/v1/advice', async(request, response) => {
     }
   }
   try {
-    const id = await database('comment').insert(comment, 'id')
+    const id = await database('comments').insert(comment, 'id')
     response.status(201).json({ id })
   } catch (error) {
     response.status(500).json({ error })
