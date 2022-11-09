@@ -35,8 +35,5 @@ module.exports = {
       directory: './db/seeds/dev'
     },
     useNullAsDefault: true
-      // tableName: 'knex_migrations'
-    }
-  // }
-
+  }
 };
