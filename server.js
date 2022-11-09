@@ -4,7 +4,7 @@ const cors = require('cors')
 const environment = process.env.NODE_ENV || 'development'
 const configuration = require('./knexfile')[environment]
 const database = require('knex')(configuration)
-const bodyParser = require("body-parser");
+const bodyParser = require('body-parser');
 
 app.use(cors())
 app.use(express.json())
@@ -67,7 +67,7 @@ app.post('/api/v1/comments', async(request, response) => {
   }
   try {
     const id = await database('comments').insert(comment, 'id')
-    response.status(201).json({ id })
+    response.status(201).json(id)
   } catch (error) {
     response.status(500).json({ error })
   }
