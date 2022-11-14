@@ -53,6 +53,8 @@ Project is created with:
 |user_message| commentor's message |text | 
 
 ### Routes 
+primary route: https://te-cuento.herokuapp.com/api/v1
+
 | Routes | HTTP Methods| Description
 |:------- |:---------------|:--------------
 | /teas| GET | Displays all teas
